@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap");
+/* font-family: 'Exo 2', sans-serif; */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: black;
+  font-family: 'Exo 2', sans-serif; }
+  body header {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw; }
+    body header nav {
+      display: grid;
+      grid-template-areas: "img1 logo img3" "btn1 btn2 btn3" "img2 img2 img2";
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 50vh 5vh 45vh; }
+      body header nav .seccionLogo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        grid-area: logo; }
+        body header nav .seccionLogo img {
+          height: 100%; }
+      body header nav .containerImg1 {
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+        width: 100%;
+        grid-area: img1; }
+        body header nav .containerImg1 img {
+          height: 100%;
+          transform: translateY(-25%);
+          opacity: 0; }
+      body header nav .containerImg2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden;
+        width: 100%;
+        grid-area: img2; }
+        body header nav .containerImg2 img {
+          transform: translateY(50%);
+          opacity: 0;
+          width: 100%; }
+      body header nav .btnEntrar {
+        text-decoration: none;
+        grid-area: btn1;
+        display: flex;
+        justify-content: center; }
+        body header nav .btnEntrar a {
+          text-decoration: none;
+          color: white; }
+      body header nav .btnEntrar2 {
+        grid-area: btn2;
+        display: flex;
+        justify-content: center; }
+        body header nav .btnEntrar2 a {
+          text-decoration: none;
+          color: white; }
+      body header nav .btnEntrar3 {
+        grid-area: btn3;
+        display: flex;
+        justify-content: center; }
+        body header nav .btnEntrar3 a {
+          text-decoration: none;
+          color: white; }
+      body header nav .containerImg3 {
+        display: flex;
+        justify-content: flex-end;
+        overflow: hidden;
+        width: 100%;
+        grid-area: img3; }
+        body header nav .containerImg3 img {
+          height: 100%;
+          transform: translateY(25%);
+          opacity: 0; }
