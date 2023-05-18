@@ -1,0 +1,109 @@
+
+@include media-query('min-width: 768px'){
+
+    header{
+        background-color:rgba($color: #ffffff, $alpha: 1.0);
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        nav{
+            display: grid;
+            grid-template-areas: 
+            "img1 logo img3"
+            "btn1 btn2 btn3"
+            "img2 img2 img2";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 50vh 5vh 45vh;
+            
+            .seccionLogo{
+                display:flex;
+                justify-content: center;
+                width: 100%;
+                grid-area: logo;
+                img{
+                    height: 100%;
+                }
+            }
+
+            .containerImg1{
+                display: flex;
+                justify-content: flex-end;
+                overflow: hidden;
+                width: 100%;
+                grid-area: img1;
+                img{
+                    height: 100%;
+                    transform: translateY(-25%);
+                    opacity: 0;
+                }
+            }
+
+            .containerImg2{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                overflow: hidden;
+                width: 100%;
+                grid-area: img2;
+                img{
+                    transform: translateY(50%);
+                    opacity: 0;
+                    width:100%;
+                }
+            }
+
+
+                
+                .btnEntrar{
+                    text-decoration: none;
+                    grid-area: btn1;
+                    display: flex;
+                    justify-content: center;
+                    background-color: rgba($color: #000000, $alpha: 1.0);
+                    a{
+                        text-decoration: none;
+                        color:rgb(255, 255, 255);
+                    }
+                }
+
+
+            .btnEntrar2{
+                grid-area: btn2;
+                display: flex;
+                justify-content: center;
+                background-color: rgba($color: #000000, $alpha: 1.0);
+                a{
+                    text-decoration: none;
+                    color:rgb(255, 255, 255);
+                }
+            }
+            
+            .btnEntrar3{
+                grid-area: btn3;
+                display: flex;
+                justify-content: center;
+                background-color: rgba($color: #000000, $alpha: 1.0);
+                a{
+                    text-decoration: none;
+                    color:rgb(255, 255, 255);
+                }
+            }
+
+            .containerImg3{
+                display: flex;
+                justify-content: flex-end;
+                overflow: hidden;
+                width: 100%;
+                grid-area: img3;
+                img{
+                    height: 100%;
+                    transform: translateY(25%);
+                    opacity: 0;
+                }
+            }
+        }
+    
+    }
+
+
+}
