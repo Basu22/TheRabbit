@@ -1,5 +1,33 @@
+//Paleta de Colores The Rabbit
+//#78b4b9 - rgb(120, 180, 185);
+//#f2de5f - rgb(242, 222, 95);
+//#e489af - rgb(228, 137, 175)
+
+@mixin flex ($flex_direction, $justify_content){
+  display: flex;
+  flex-direction: $flex_direction;
+  justify-content: $justify_content;
+  @content;
+}
+
+
+//Mixin de Media Query
 @mixin media-query($size) {
-    @media only screen and ($size) {
-      @content;
-    }
+  @media only screen and ($size) {
+    @content;
   }
+}
+
+
+// variables de botones del navegador
+$background_nav: rgb(0, 0, 0);
+$font_color_boton:rgb(255, 255, 255);
+
+// formato botones del navegador
+@mixin boton_nav(){
+  background-color: $background_nav;
+  a{
+      text-decoration: none;
+      color:$font_color_boton;
+  }
+}

@@ -5,7 +5,8 @@
   padding: 0; }
 
 body {
-  font-family: 'Exo 2', sans-serif; }
+  font-family: 'Exo 2', sans-serif;
+  scroll-behavior: smooth; }
 
 /* font-family: 'Exo 2', sans-serif; */
 @media only screen and (min-width: 768px) {
@@ -13,11 +14,10 @@ body {
     background-color: white;
     overflow: hidden;
     height: 100vh;
-    width: 100vw; }
+    width: 100%; }
     header nav {
       display: grid;
-      grid-template-areas: "img1 logo img3" "btn1 btn2 btn3" "img2 img2 img2";
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas: "logo" "btn" "img";
       grid-template-rows: 50vh 5vh 45vh; }
       header nav .seccionLogo {
         display: flex;
@@ -26,62 +26,32 @@ body {
         grid-area: logo; }
         header nav .seccionLogo img {
           height: 100%; }
-      header nav .containerImg1 {
-        display: flex;
-        justify-content: flex-end;
-        overflow: hidden;
-        width: 100%;
-        grid-area: img1; }
-        header nav .containerImg1 img {
-          height: 100%;
-          transform: translateY(-25%);
-          opacity: 0; }
-      header nav .containerImg2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        overflow: hidden;
-        width: 100%;
-        grid-area: img2; }
-        header nav .containerImg2 img {
-          transform: translateY(50%);
-          opacity: 0;
+      header nav .seccionImgNav {
+        grid-area: img;
+        display: grid;
+        grid-template-areas: "img1 img2 img3 img4 img5";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        position: relative; }
+        header nav .seccionImgNav .containerImg {
+          display: flex;
+          justify-content: center;
+          overflow: hidden;
           width: 100%; }
-      header nav .btnEntrar {
-        text-decoration: none;
-        grid-area: btn1;
-        display: flex;
-        justify-content: center;
-        background-color: black; }
-        header nav .btnEntrar a {
-          text-decoration: none;
-          color: white; }
-      header nav .btnEntrar2 {
-        grid-area: btn2;
-        display: flex;
-        justify-content: center;
-        background-color: black; }
-        header nav .btnEntrar2 a {
-          text-decoration: none;
-          color: white; }
-      header nav .btnEntrar3 {
-        grid-area: btn3;
-        display: flex;
-        justify-content: center;
-        background-color: black; }
-        header nav .btnEntrar3 a {
-          text-decoration: none;
-          color: white; }
-      header nav .containerImg3 {
-        display: flex;
-        justify-content: flex-end;
-        overflow: hidden;
-        width: 100%;
-        grid-area: img3; }
-        header nav .containerImg3 img {
-          height: 100%;
-          transform: translateY(25%);
-          opacity: 0; } }
+          header nav .seccionImgNav .containerImg img {
+            filter: blur(10px) grayscale(100%); }
+      header nav .seccionBtnNav {
+        grid-area: btn;
+        display: grid;
+        grid-template-areas: "btn1 btn2 btn3 btn4 btn5";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+        header nav .seccionBtnNav .btnNav {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: black; }
+          header nav .seccionBtnNav .btnNav a {
+            text-decoration: none;
+            color: white; } }
 
 @media only screen and (max-width: 767px) {
   header {
@@ -121,3 +91,8 @@ body {
           height: auto;
           border: 1px solid white;
           border-radius: 100%; } }
+
+.seccionInicio {
+  display: grid;
+  grid-template-areas: 'inicio';
+  grid-template-rows: 100vh; }

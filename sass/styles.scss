@@ -8,8 +8,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600&display=swap');
 body{
     font-family: 'Exo 2', sans-serif;
+    scroll-behavior: smooth;
 }
 /* font-family: 'Exo 2', sans-serif; */
 @import './variables.scss';
 @import './header/headerDesktop.scss';
 @import './header/headerMobile.scss';
+@import './inicio/inicio_desktop.scss'
