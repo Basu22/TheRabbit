@@ -2,4 +2,35 @@
     display: grid;
     grid-template-areas: 'inicio';
     grid-template-rows: 100vh;
+
+    .artInicio{
+        grid-area: inicio;
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "texto";
+        grid-template-rows: 25vh 25vh;
+        grid-template-columns: 80vw;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+
+        .tituloInicio{
+            font-size: 3rem;
+            grid-area: titulo;
+            @include altoAncho(100%,100%);
+            @include flex(column,nowrap,normal,center,center)
+        }
+
+        .textoInicio{
+            grid-area: texto;
+            text-align: center;
+            opacity: 0;
+            @include altoAncho(100%,100%);
+            @include flex(column,nowrap,normal,space-around,center)
+        }
+
+    }
+
 }

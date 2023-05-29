@@ -5,94 +5,183 @@
   padding: 0; }
 
 body {
-  font-family: 'Exo 2', sans-serif;
-  scroll-behavior: smooth; }
+  font-family: 'Exo 2', sans-serif; }
 
 /* font-family: 'Exo 2', sans-serif; */
 @media only screen and (min-width: 768px) {
-  header {
+  .header {
     background-color: white;
-    overflow: hidden;
     height: 100vh;
     width: 100%; }
-    header nav {
+    .header .navegador {
       display: grid;
       grid-template-areas: "logo" "btn" "img";
       grid-template-rows: 50vh 5vh 45vh; }
-      header nav .seccionLogo {
+      .header .navegador .seccionLogo {
         display: flex;
         justify-content: center;
         width: 100%;
         grid-area: logo; }
-        header nav .seccionLogo img {
+        .header .navegador .seccionLogo img {
           height: 100%; }
-      header nav .seccionImgNav {
+      .header .navegador .seccionImgNav {
         grid-area: img;
         display: grid;
         grid-template-areas: "img1 img2 img3 img4 img5";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        position: relative; }
-        header nav .seccionImgNav .containerImg {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+        .header .navegador .seccionImgNav .containerImg {
           display: flex;
           justify-content: center;
           overflow: hidden;
           width: 100%; }
-          header nav .seccionImgNav .containerImg img {
+          .header .navegador .seccionImgNav .containerImg img {
             filter: blur(10px) grayscale(100%); }
-      header nav .seccionBtnNav {
+      .header .navegador .seccionBtnNav {
         grid-area: btn;
         display: grid;
         grid-template-areas: "btn1 btn2 btn3 btn4 btn5";
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-        header nav .seccionBtnNav .btnNav {
+        .header .navegador .seccionBtnNav .btnNav {
           display: flex;
           justify-content: center;
           align-items: center;
           background-color: black; }
-          header nav .seccionBtnNav .btnNav a {
+          .header .navegador .seccionBtnNav .btnNav a {
             text-decoration: none;
-            color: white; } }
+            color: white; }
+      .header .navegador .seccionNavScroll {
+        display: grid;
+        grid-template-areas: "logo btn1 btn2 btn3 btn4 btn5";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 10vh;
+        position: fixed;
+        width: 100%;
+        opacity: 0; }
+        .header .navegador .seccionNavScroll .btnNavScroll {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: black; }
+          .header .navegador .seccionNavScroll .btnNavScroll a {
+            text-decoration: none;
+            color: white; }
+        .header .navegador .seccionNavScroll .seccionLogoScroll {
+          grid-area: logo;
+          background-color: white;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-content: normal;
+          justify-content: center;
+          align-items: normal; }
+          .header .navegador .seccionNavScroll .seccionLogoScroll img {
+            height: 100%;
+            width: auto; } }
 
 @media only screen and (max-width: 767px) {
   header {
     background-color: white;
-    width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    width: 100vw; }
     header .navegador {
-      width: 100%; }
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: center;
+      align-items: center; }
       header .navegador .seccionLogo {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        height: auto;
         width: 100%; }
         header .navegador .seccionLogo img {
           width: 100%; }
-      header .navegador .containerImg1, header .navegador .containerImg2, header .navegador .containerImg3 {
-        display: none; }
       header .navegador .navHamb {
-        width: 100%;
+        background-color: black;
+        height: 100%;
+        width: 50%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
         position: absolute;
-        bottom: 0px;
-        left: 0px; }
+        top: 0px;
+        right: auto;
+        bottom: auto;
+        left: 0px;
+        transform: translateX(-100%); }
         header .navegador .navHamb a {
           text-decoration: none;
           color: white; }
-          header .navegador .navHamb a span {
-            text-shadow: 1px 1px 15px orange; }
-      header .navegador .menuHamb {
-        width: 5%;
-        height: 5%; }
-        header .navegador .menuHamb .circulo {
-          content: " ";
-          width: auto;
-          height: auto;
-          border: 1px solid white;
-          border-radius: 100%; } }
+      header .navegador .btnHamb {
+        position: absolute;
+        top: 0px;
+        right: auto;
+        bottom: auto;
+        left: 0px;
+        height: 10%;
+        width: 15%; }
+        header .navegador .btnHamb button {
+          height: 100%;
+          width: 100%;
+          background: none;
+          border: 0px;
+          cursor: pointer;
+          padding: 0; }
+          header .navegador .btnHamb button span {
+            border-radius: 5px;
+            background-color: black;
+            display: block;
+            height: 2px;
+            width: 60%;
+            margin: 5px auto; } }
 
 .seccionInicio {
   display: grid;
   grid-template-areas: 'inicio';
   grid-template-rows: 100vh; }
+  .seccionInicio .artInicio {
+    grid-area: inicio;
+    display: grid;
+    grid-template-areas: "titulo" "texto";
+    grid-template-rows: 25vh 25vh;
+    grid-template-columns: 80vw;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center; }
+    .seccionInicio .artInicio .tituloInicio {
+      font-size: 3rem;
+      grid-area: titulo;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: normal;
+      justify-content: center;
+      align-items: center; }
+    .seccionInicio .artInicio .textoInicio {
+      grid-area: texto;
+      text-align: center;
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: normal;
+      justify-content: space-around;
+      align-items: center; }

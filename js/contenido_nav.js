@@ -1,4 +1,4 @@
-export const contenidoInicio = [
+export const contenido = [
     {
         nombreNav:'Inicio',
         titulo1:'Estrategias digitales que te permiten vender más',

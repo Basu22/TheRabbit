@@ -1,12 +1,11 @@
 
 @include media-query('min-width: 768px'){
 
-    header{
+    .header{
         background-color:rgba($color: #ffffff, $alpha: 1.0);
-        overflow: hidden;
         height: 100vh;
         width: 100%;
-        nav{
+        .navegador{
             display: grid;
             grid-template-areas: 
             "logo"
@@ -30,7 +29,6 @@
                 grid-template-areas: 
                 "img1 img2 img3 img4 img5";
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                position: relative;
 
                 .containerImg{
                     display: flex;
@@ -57,12 +55,36 @@
                 }
             }
 
+            .seccionNavScroll{
+                display: grid;
+                grid-template-areas: 
+                "logo btn1 btn2 btn3 btn4 btn5";
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows: 10vh;
+                position:fixed;
+                width: 100%;
+                opacity: 0;
+                .btnNavScroll{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    @include boton_nav;
+                }
+                .seccionLogoScroll{
+                    grid-area: logo;
+                    background-color:rgba($color: #ffffff, $alpha: 1.0);
+                    @include altoAncho(100%,100%);
+                    @include flex(row,nowrap,normal,center,normal);
+                    img{
+                        @include altoAncho(100%,auto);
+                    }
+
+                }
+            }
 
         }
-    
+      
     }
-
-    
 
 
 }
