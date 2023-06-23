@@ -10,45 +10,59 @@ body {
 /* font-family: 'Exo 2', sans-serif; */
 @media only screen and (min-width: 768px) {
   .header {
-    background-color: white;
-    height: 100vh;
-    width: 100%; }
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden; }
+    .header .seccionVideo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1; }
+      .header .seccionVideo video {
+        width: 100%; }
     .header .navegador {
       display: grid;
-      grid-template-areas: "logo" "btn" "img";
-      grid-template-rows: 50vh 5vh 45vh; }
-      .header .navegador .seccionLogo {
+      grid-template-areas: "titulo logo";
+      grid-template-columns: 50vw 50vw;
+      grid-template-rows: 100vh;
+      align-content: normal;
+      justify-content: normal;
+      align-items: normal; }
+      .header .navegador .seccionTitulo {
+        grid-area: titulo;
         display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
         justify-content: center;
-        width: 100%;
-        grid-area: logo; }
+        align-items: center;
+        row-gap: 5%;
+        text-align: center;
+        width: 100%; }
+        .header .navegador .seccionTitulo h1 {
+          width: 80%;
+          color: white;
+          font-size: 2rem; }
+        .header .navegador .seccionTitulo button {
+          font-family: 'Exo 2', sans-serif;
+          padding: 2%;
+          cursor: pointer;
+          box-shadow: 10px 10px 10px 5px black;
+          border-radius: 30px;
+          border: 0px;
+          font-size: 1rem;
+          background-color: #78b4b9; }
+      .header .navegador .seccionLogo {
+        grid-area: logo;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: normal;
+        justify-content: center;
+        align-items: center;
+        width: 100%; }
         .header .navegador .seccionLogo img {
-          height: 100%; }
-      .header .navegador .seccionImgNav {
-        grid-area: img;
-        display: grid;
-        grid-template-areas: "img1 img2 img3 img4 img5";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-        .header .navegador .seccionImgNav .containerImg {
-          display: flex;
-          justify-content: center;
-          overflow: hidden;
-          width: 100%; }
-          .header .navegador .seccionImgNav .containerImg img {
-            filter: blur(10px) grayscale(100%); }
-      .header .navegador .seccionBtnNav {
-        grid-area: btn;
-        display: grid;
-        grid-template-areas: "btn1 btn2 btn3 btn4 btn5";
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-        .header .navegador .seccionBtnNav .btnNav {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: black; }
-          .header .navegador .seccionBtnNav .btnNav a {
-            text-decoration: none;
-            color: white; }
+          height: 50%; }
       .header .navegador .seccionNavScroll {
         display: grid;
         grid-template-areas: "logo btn1 btn2 btn3 btn4 btn5";
@@ -67,15 +81,15 @@ body {
             color: white; }
         .header .navegador .seccionNavScroll .seccionLogoScroll {
           grid-area: logo;
-          background-color: white;
-          height: 100%;
-          width: 100%;
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
           align-content: normal;
           justify-content: center;
-          align-items: normal; }
+          align-items: normal;
+          height: 100%;
+          width: 100%;
+          background-color: white; }
           .header .navegador .seccionNavScroll .seccionLogoScroll img {
             height: 100%;
             width: auto; } }
@@ -159,12 +173,13 @@ body {
     grid-template-rows: 25vh 25vh;
     grid-template-columns: 80vw;
     justify-content: center;
-    align-items: center;
+    align-items: space-evenly;
     align-content: center;
     justify-items: center; }
     .seccionInicio .artInicio .tituloInicio {
       font-size: 3rem;
       grid-area: titulo;
+      text-align: center;
       height: 100%;
       width: 100%;
       display: flex;

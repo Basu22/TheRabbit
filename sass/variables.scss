@@ -14,6 +14,20 @@
   @content;
 }
 
+@mixin grid_padre($gridTemplateAreas,$gridTemplateColumns,$gridTemplatesRows,$align_content,$justify_content,$align_items) {
+  display: grid;
+  grid-template-areas: $gridTemplateAreas;
+  grid-template-columns: $gridTemplateColumns;
+  grid-template-rows: $gridTemplatesRows;
+  align-content: $align_content;
+  justify-content: $justify_content;
+  align-items: $align_items;
+}
+
+@mixin grid_hijo($gridArea){
+  grid-area: $gridArea;
+}
+
 //Para Alto y Ancho
 @mixin altoAncho ($height,$width){
   height: $height;

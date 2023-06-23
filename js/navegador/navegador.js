@@ -2,55 +2,53 @@ import * as data from '../contenido_nav.js';
 import * as animacionNav from './animacionNav.js';
 import * as animacionNavMobile from './animacionNavMobile.js';
 
+let header = document.querySelector('.header')
 let navegador = document.querySelector('.navegador')
 let cantidad = 1
 
 if (window.innerWidth >= 768){
     
-    //creo el contenedor del logo del navegador.
     let seccionLogo = document.createElement('section')
     seccionLogo.classList.add('seccionLogo')
-    //le inserto la imagen del Logo
+
+    //---------- LOGO DEL HEADER-----------//
     seccionLogo.insertAdjacentHTML('beforeend',`
-        <img src="./img/TheRabbitIso-04.png" alt="">
+        <img src="./img/TheRabbitIso-celeste.png" alt="">
         `)
     navegador.appendChild(seccionLogo)
 
-    //creo la seccion de la botonera del navegador
-    let seccionBtnNav = document.createElement('section')
-    seccionBtnNav.classList.add('seccionBtnNav')
-    navegador.appendChild(seccionBtnNav)
+    //---------- VIDEO DEL HEADER-----------//
+    let seccionVideo = document.createElement('section')
+    seccionVideo.classList.add('seccionVideo')
+    
+    let videoNavegador = document.createElement('video')
+    videoNavegador.src = "/video/video_therabbit2.mp4"
+    videoNavegador.autoplay = 'autoplay'
+    videoNavegador.loop = 'loop'
+    videoNavegador.muted='muted'
+    header.appendChild(seccionVideo).appendChild(videoNavegador)
 
-    //creo la seccion de las imagenes del navegador
-    let seccionImgNav = document.createElement('section')
-    seccionImgNav.classList.add('seccionImgNav')
-    navegador.appendChild(seccionImgNav)
+    //---------- TITULO Y BOTON DEL HEADER-----------//
+    let seccionTitulo = document.createElement('section');
+    seccionTitulo.classList.add('seccionTitulo');
+    
+    let textoTitulo = document.createElement('h1')
+    textoTitulo.insertAdjacentText('beforeend',data.contenido[0].copy1_t1)
+    seccionTitulo.appendChild(textoTitulo)
+    
+    let botonTitulo = document.createElement('button');
+    botonTitulo.classList.add('botonTitulo');
+    botonTitulo.insertAdjacentText('beforeend',data.contenido[0].cta_t1)
+    seccionTitulo.appendChild(botonTitulo)
 
-    //creo la seccion del navegador cuando scrolleo para abajo
+    navegador.appendChild(seccionTitulo)
+    
+    //---------- NAVEGADOR SCROLL-----------//
     let seccionNavScroll = document.createElement('section')
     seccionNavScroll.classList.add('seccionNavScroll')
     navegador.appendChild(seccionNavScroll)
 
-
     for (const e in data.contenido) {
-
-        seccionImgNav.insertAdjacentHTML('beforeend',`
-        <article class="containerImg" id="imgNav${cantidad}">
-            <img src="./img/Equipo${cantidad}.jpg" alt="">
-        </article>
-        `)
-        document.querySelector(`#imgNav${cantidad}`).style.gridArea = `img${cantidad}`
-
-        //insertamos HTML armando desde archivo JS
-        seccionBtnNav.insertAdjacentHTML('beforeend',
-        `
-        <article class="btnNav" id="btn${cantidad}">
-            <a href="#"><span id="${cantidad}">${data.contenido[e].nombreNav}</span></a>
-        </article>
-        `)
-        //agregamos un style de Grid Area por cada linea de navegador.
-        document.querySelector(`#btn${cantidad}`).style.gridArea = `btn${cantidad}`
-        
         //agregamos el navegador scroll
         seccionNavScroll.insertAdjacentHTML('beforeend',
         `

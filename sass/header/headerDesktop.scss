@@ -2,56 +2,53 @@
 @include media-query('min-width: 768px'){
 
     .header{
-        background-color:rgba($color: #ffffff, $alpha: 1.0);
-        height: 100vh;
-        width: 100%;
-        .navegador{
-            display: grid;
-            grid-template-areas: 
-            "logo"
-            "btn"
-            "img";
-            grid-template-rows: 50vh 5vh 45vh;
-            
-            .seccionLogo{
-                display:flex;
-                justify-content: center;
+        position: relative;
+        background-color:rgba($color: #000000, $alpha: 0.5);
+        overflow: hidden;
+
+        .seccionVideo{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            video{
                 width: 100%;
-                grid-area: logo;
+            }
+        }
+
+        .navegador{
+            @include grid_padre("titulo logo",50vw 50vw,100vh,normal,normal,normal);
+            
+            .seccionTitulo{
+                @include grid_hijo(titulo);
+                @include flex(column,nowrap,center,center,center);
+                row-gap: 5%;
+                text-align: center;
+                width: 100%;
+                h1{
+                    width: 80%;
+                    color: rgba($color: #ffffff, $alpha: 1.0);
+                    font-size: 2rem;
+                }
+                button{
+                    font-family: 'Exo 2', sans-serif;
+                    padding: 2%;
+                    cursor: pointer;
+                    box-shadow: 10px 10px 10px 5px black;
+                    border-radius: 30px;
+                    border: 0px;
+                    font-size: 1rem;
+                    background-color: rgba($color: #78b4b9, $alpha: 1.0)
+                }
+
+            }
+
+            .seccionLogo{
+                @include grid_hijo(logo);
+                @include flex(row,nowrap,normal,center,center);
+                width: 100%;
                 img{
-                    height: 100%;
-                }
-            }
-
-            .seccionImgNav{            
-                grid-area:img;
-                display: grid;
-                grid-template-areas: 
-                "img1 img2 img3 img4 img5";
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-                .containerImg{
-                    display: flex;
-                    justify-content: center;
-                    overflow: hidden;
-                    width: 100%;
-                    img{
-                        filter:blur(10px) grayscale(100%)
-                    }
-                }
-            }
-                
-            .seccionBtnNav{
-                grid-area: btn;
-                display: grid;
-                grid-template-areas: 
-                "btn1 btn2 btn3 btn4 btn5";
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                .btnNav{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    @include boton_nav;
+                    height: 50%;
                 }
             }
 
@@ -71,10 +68,10 @@
                     @include boton_nav;
                 }
                 .seccionLogoScroll{
-                    grid-area: logo;
-                    background-color:rgba($color: #ffffff, $alpha: 1.0);
-                    @include altoAncho(100%,100%);
+                    @include grid_hijo(logo);
                     @include flex(row,nowrap,normal,center,normal);
+                    @include altoAncho(100%,100%);
+                    background-color:rgba($color: #ffffff, $alpha: 1.0);
                     img{
                         @include altoAncho(100%,auto);
                     }

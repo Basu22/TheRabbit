@@ -12,13 +12,14 @@
         grid-template-rows: 25vh 25vh;
         grid-template-columns: 80vw;
         justify-content: center;
-        align-items: center;
+        align-items: space-evenly;
         align-content: center;
         justify-items: center;
 
         .tituloInicio{
             font-size: 3rem;
             grid-area: titulo;
+            text-align: center;
             @include altoAncho(100%,100%);
             @include flex(column,nowrap,normal,center,center)
         }
