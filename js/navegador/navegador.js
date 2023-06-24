@@ -22,7 +22,7 @@ if (window.innerWidth >= 768){
     seccionVideo.classList.add('seccionVideo')
     
     let videoNavegador = document.createElement('video')
-    videoNavegador.src = "/video/video_therabbit2.mp4"
+    videoNavegador.src = "./video/video_therabbit2.mp4"
     videoNavegador.autoplay = 'autoplay'
     videoNavegador.loop = 'loop'
     videoNavegador.muted='muted'
