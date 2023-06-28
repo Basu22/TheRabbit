@@ -1,6 +1,6 @@
-import * as data from '../contenido_nav.js';
-import * as animacionNav from './animacionNav.js';
-import * as animacionNavMobile from './animacionNavMobile.js';
+import * as data from './contenido_nav.js';
+import { animacionNavDesktop } from './animacionNavDesktop.js';
+import { animacionNavMobile } from './animacionNavMobile.js';
 
 let header = document.querySelector('.header')
 let navegador = document.querySelector('.navegador')
@@ -22,7 +22,7 @@ if (window.innerWidth >= 768){
     seccionVideo.classList.add('seccionVideo')
     
     let videoNavegador = document.createElement('video')
-    videoNavegador.src = "./video/video_therabbit.mp4"
+    videoNavegador.src = "./video/video_therabbit1.mp4"
     videoNavegador.autoplay = 'autoplay'
     videoNavegador.loop = 'loop'
     videoNavegador.muted='muted'
@@ -71,7 +71,7 @@ if (window.innerWidth >= 768){
     seccionNavScroll.appendChild(seccionLogoScroll)
     
     //ejecuto la aninación del Navegador solo si estoy en Desktop
-    animacionNav.animacionNav()
+    animacionNavDesktop()
 
 }else{
 
@@ -118,5 +118,5 @@ if (window.innerWidth >= 768){
     `)
     navegador.appendChild(btnHamb)
 
-    animacionNavMobile.animacionNavMobile()
+    animacionNavMobile()
 }

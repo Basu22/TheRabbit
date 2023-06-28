@@ -1,5 +1,5 @@
-import * as data from '../contenido_nav.js';
-import * as animacion from './animacionInicio.js'
+import * as data from '../navegador/contenido_nav.js';
+import { animacionInicio } from './animacionInicio.js'
 
 if (window.innerWidth >= 768){
     let seccionInicio = document.createElement('section');
@@ -20,6 +20,6 @@ if (window.innerWidth >= 768){
 
     document.querySelector('main').appendChild(seccionInicio)
 
-    animacion.animacionInicio()
+    animacionInicio()
 
 }

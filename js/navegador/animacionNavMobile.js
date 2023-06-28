@@ -1,4 +1,4 @@
-export function animacionNavMobile (){
+export const animacionNavMobile = ()=>{
 
     let btnHamb = document.querySelector('.btnHamb button')
     let flag=true

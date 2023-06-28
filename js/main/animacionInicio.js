@@ -1,4 +1,4 @@
-export function animacionInicio(){
+export const animacionInicio = ()=>{
 
     window.addEventListener('scroll',()=>{
 
