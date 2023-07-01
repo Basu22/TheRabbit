@@ -5,13 +5,23 @@
   padding: 0; }
 
 body {
-  font-family: 'Exo 2', sans-serif; }
+  font-family: 'Exo 2', sans-serif;
+  overflow: overlay; }
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #78b4b9;
+  border-radius: 20px;
+  border-right: 5px; }
 
 /* font-family: 'Exo 2', sans-serif; */
 @media only screen and (min-width: 768px) {
   .header {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(120, 180, 185, 0.5);
     overflow: hidden; }
     .header .seccionVideo {
       position: absolute;
@@ -42,7 +52,9 @@ body {
         .header .navegador .seccionTitulo h1 {
           width: 80%;
           color: white;
-          font-size: 2rem; }
+          font-size: 2rem;
+          font-weight: bolder;
+          text-shadow: 4px 3px 2px black; }
         .header .navegador .seccionTitulo button {
           font-family: 'Exo 2', sans-serif;
           padding: 2%;
@@ -60,7 +72,9 @@ body {
         align-content: normal;
         justify-content: center;
         align-items: center;
-        width: 100%; }
+        width: 100%;
+        background-color: black;
+        border-radius: 100% 0% 0% 0%; }
         .header .navegador .seccionLogo img {
           height: 50%; }
       .header .navegador .seccionNavScroll {
@@ -96,7 +110,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   header {
-    background-color: white;
+    background-color: black;
     height: 100vh;
     width: 100vw; }
     header .navegador {
@@ -156,7 +170,7 @@ body {
           padding: 0; }
           header .navegador .btnHamb button span {
             border-radius: 5px;
-            background-color: black;
+            background-color: #78b4b9;
             display: block;
             height: 2px;
             width: 60%;

@@ -3,7 +3,7 @@
 
     .header{
         position: relative;
-        background-color:rgba($color: #000000, $alpha: 0.5);
+                background-color: rgba($color: #78b4b9, $alpha: 0.5);
         overflow: hidden;
 
         .seccionVideo{
@@ -29,6 +29,8 @@
                     width: 80%;
                     color: rgba($color: #ffffff, $alpha: 1.0);
                     font-size: 2rem;
+                    font-weight: bolder;
+                    text-shadow: 4px 3px 2px rgba($color: #000000, $alpha: 1.0);
                 }
                 button{
                     font-family: 'Exo 2', sans-serif;
@@ -47,6 +49,8 @@
                 @include grid_hijo(logo);
                 @include flex(row,nowrap,normal,center,center);
                 width: 100%;
+                background-color: rgba($color: #000000, $alpha: 1.0);
+                border-radius: 100% 0% 0% 0%;
                 img{
                     height: 50%;
                 }

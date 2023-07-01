@@ -81,7 +81,7 @@ if (window.innerWidth >= 768){
     seccionLogo.classList.add('seccionLogo')
     //le inserto la imagen del Logo
     seccionLogo.insertAdjacentHTML('beforeend',`
-        <img src="./img/TheRabbitIso-04.png" alt="">
+        <img src="./img/TheRabbitIso-celeste.png" alt="">
         `)
     navegador.appendChild(seccionLogo)
 

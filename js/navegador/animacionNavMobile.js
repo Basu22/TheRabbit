@@ -27,15 +27,15 @@ export const animacionNavMobile = ()=>{
             flag=false;
         }else{
             document.querySelector('.lineaSuperior').style.transform="translateY(0px) rotate(0deg) ";
-            document.querySelector('.lineaSuperior').style.backgroundColor="#000000";
+            document.querySelector('.lineaSuperior').style.backgroundColor="#78b4b9";
             document.querySelector('.lineaSuperior').style.transition="all 1s";
             
             document.querySelector('.lineaMedia').style.opacity="1";
-            document.querySelector('.lineaMedia').style.backgroundColor="#000000";
+            document.querySelector('.lineaMedia').style.backgroundColor="#78b4b9";
             document.querySelector('.lineaMedia').style.transition="all 1s";
             
             document.querySelector('.lineaInferior').style.transform="translateY(0px) rotate(0deg)";
-            document.querySelector('.lineaInferior').style.backgroundColor="#000000";
+            document.querySelector('.lineaInferior').style.backgroundColor="#78b4b9";
             document.querySelector('.lineaInferior').style.transition="all 1s";
 
             document.querySelector('.navHamb').style.transform="translateX(-100%)";
