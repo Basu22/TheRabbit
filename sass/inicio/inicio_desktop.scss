@@ -1,15 +1,17 @@
 .seccionInicio{
+    background-color: rgba($color: #78b4b9, $alpha: 0.5);
     display: grid;
-    grid-template-areas: 'inicio';
-    grid-template-rows: 100vh;
+    grid-template-areas: 
+        'artTitulo'
+        'artTexto';
+    grid-template-rows: 50vh 50vh;
 
-    .artInicio{
-        grid-area: inicio;
+    .artTitulo{
+        grid-area: artTitulo;
         display: grid;
         grid-template-areas:
-            "titulo"
-            "texto";
-        grid-template-rows: 25vh 25vh;
+            "titulo";
+        grid-template-rows: 25vh;
         grid-template-columns: 80vw;
         justify-content: center;
         align-items: space-evenly;
@@ -23,15 +25,44 @@
             @include altoAncho(100%,100%);
             @include flex(column,nowrap,normal,center,center)
         }
-
+    }
+    .artTexto{
+        grid-area: artTexto;
+        display: grid;
+        grid-template-areas:
+            "texto";
+        grid-template-columns: 100%;
+        justify-items: center;
         .textoInicio{
             grid-area: texto;
+            display: grid;
+            grid-template-areas:
+            "texto1 texto2 texto3";
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
             text-align: center;
             opacity: 0;
-            @include altoAncho(100%,100%);
-            @include flex(column,nowrap,normal,space-around,center)
-        }
+            @include altoAncho(100%,90%);
+            .artParrafo{
+                @include altoAncho(90%,90%);
+                background-color: rgba($color: #000000, $alpha: 1.0);
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                align-content: center;
+                box-shadow: rgba($color: #000000, $alpha: 0.5) 0px 6px 12px -2px;
+                p{
+                    width: 90%;
+                    height: 100%;
+                    color: rgba($color: #78b4b9, $alpha: 1.0);
+                    text-shadow: 1px 1px 1px 1px rgba($color: #fbfbfb, $alpha: 1.0);
+                    font-size: 1.2rem;
+                    font-weight: bolder;
+                    
+                }
 
+            }
+        }
     }
 
 }

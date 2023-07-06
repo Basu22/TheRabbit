@@ -8,21 +8,32 @@ let cantidad = 1
 
 if (window.innerWidth >= 768){
     
-    let seccionLogo = document.createElement('section')
-    seccionLogo.classList.add('seccionLogo')
+    let seccionLogo = document.createElement('section');
+    seccionLogo.classList.add('seccionLogo');
 
     //---------- LOGO DEL HEADER-----------//
-    seccionLogo.insertAdjacentHTML('beforeend',`
-        <img src="./img/TheRabbitIso-celeste.png" alt="">
-        `)
+    let logo = document.createElement('img');
+    logo.src = './img/TheRabbitIso-celeste.png'
+    seccionLogo.appendChild(logo)
     navegador.appendChild(seccionLogo)
+        
+    let seccionName = document.createElement('section');
+    seccionName.classList.add('seccionName');
+
+    let name = document.createElement('img');
+    name.src = './img/therabbitTextWhite.png';
+    seccionName.classList.add('seccionName');
+    seccionName.appendChild(name)
+    navegador.appendChild(seccionName)
+    
+
 
     //---------- VIDEO DEL HEADER-----------//
     let seccionVideo = document.createElement('section')
     seccionVideo.classList.add('seccionVideo')
     
     let videoNavegador = document.createElement('video')
-    videoNavegador.src = "./video/video_therabbit1.mp4"
+    videoNavegador.src = "./video/video_therabbit2.mp4"
     videoNavegador.autoplay = 'autoplay'
     videoNavegador.loop = 'loop'
     videoNavegador.muted='muted'
@@ -38,7 +49,7 @@ if (window.innerWidth >= 768){
     
     let botonTitulo = document.createElement('button');
     botonTitulo.classList.add('botonTitulo');
-    botonTitulo.insertAdjacentText('beforeend',data.contenido[0].cta_t1)
+    botonTitulo.insertAdjacentText('beforeend',data.contenido[0].cta_t1);
     seccionTitulo.appendChild(botonTitulo)
 
     navegador.appendChild(seccionTitulo)

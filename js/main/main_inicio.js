@@ -6,17 +6,27 @@ if (window.innerWidth >= 768){
     seccionInicio.classList.add('seccionInicio');
 
     seccionInicio.insertAdjacentHTML('beforeend',`
-        <article class="artInicio">
+        <article class="artTitulo">
             <article class="tituloInicio">
                 <h1>${data.contenido[0].titulo1}</h1>
             </article>
+        </article>
+        <article class="artTexto">
             <article class="textoInicio">
-                <p>${data.contenido[0].copy1_t1}</p>
-                <p>${data.contenido[0].copy2_t1}</p>
-                <p>${data.contenido[0].copy3_t1}</p>
+                <article class="artParrafo">
+                    <p class"texto1">${data.contenido[0].copy1_t1}</p>
+                </article>
+                <article class="artParrafo">
+                    <p class"texto2">${data.contenido[0].copy2_t1}</p>
+                </article>    
+                <article class="artParrafo">
+                    <p class"texto3">${data.contenido[0].copy3_t1}</p>
+                </article>
             </article>
         </article>
     `)
+
+    
 
     document.querySelector('main').appendChild(seccionInicio)
 
