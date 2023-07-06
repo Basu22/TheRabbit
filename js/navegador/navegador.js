@@ -13,7 +13,7 @@ if (window.innerWidth >= 768){
 
     //---------- LOGO DEL HEADER-----------//
     let logo = document.createElement('img');
-    logo.src = './img/TheRabbitIso-celeste.png'
+    logo.src = './img/logo/TheRabbitAqua.png'
     seccionLogo.appendChild(logo)
     navegador.appendChild(seccionLogo)
         
@@ -21,7 +21,7 @@ if (window.innerWidth >= 768){
     seccionName.classList.add('seccionName');
 
     let name = document.createElement('img');
-    name.src = './img/therabbitTextWhite.png';
+    name.src = './img/logoTexto/therabbitTextWhite.png';
     seccionName.classList.add('seccionName');
     seccionName.appendChild(name)
     navegador.appendChild(seccionName)
@@ -77,7 +77,7 @@ if (window.innerWidth >= 768){
     seccionLogoScroll.classList.add('seccionLogoScroll')
     //le inserto la imagen del Logo
     seccionLogoScroll.insertAdjacentHTML('beforeend',`
-        <img src="./img/TheRabbitIso-04.png" alt="">
+        <img src="./img/logo/TheRabbitBlack.png" alt="">
         `)
     seccionNavScroll.appendChild(seccionLogoScroll)
     
