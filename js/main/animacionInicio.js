@@ -10,7 +10,7 @@ export const animacionInicio = ()=>{
             document.querySelector('.textoInicio').style.transition="all 1s";
         }else{
             document.querySelector('.textoInicio').style.opacity = "0";
-            document.querySelector('.textoInicio').style.transform="translateX(10%)";
+            document.querySelector('.textoInicio').style.transform="translateX(2%)";
             document.querySelector('.textoInicio').style.transition="all 2s";
         }
 
