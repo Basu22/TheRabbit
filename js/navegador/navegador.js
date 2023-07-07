@@ -13,21 +13,19 @@ if (window.innerWidth >= 768){
 
     //---------- LOGO DEL HEADER-----------//
     let logo = document.createElement('img');
-    logo.src = './img/logo/TheRabbitAqua.png'
+    logo.src = './img/logoTexto/letrasTheRabbitWhite.png'
     seccionLogo.appendChild(logo)
     navegador.appendChild(seccionLogo)
         
-    let seccionName = document.createElement('section');
+/*     let seccionName = document.createElement('section');
     seccionName.classList.add('seccionName');
 
     let name = document.createElement('img');
     name.src = './img/logoTexto/therabbitTextWhite.png';
     seccionName.classList.add('seccionName');
     seccionName.appendChild(name)
-    navegador.appendChild(seccionName)
+    navegador.appendChild(seccionName) */
     
-
-
     //---------- VIDEO DEL HEADER-----------//
     let seccionVideo = document.createElement('section')
     seccionVideo.classList.add('seccionVideo')
@@ -77,7 +75,7 @@ if (window.innerWidth >= 768){
     seccionLogoScroll.classList.add('seccionLogoScroll')
     //le inserto la imagen del Logo
     seccionLogoScroll.insertAdjacentHTML('beforeend',`
-        <img src="./img/logo/TheRabbitBlack.png" alt="">
+        <img src="./img/logo/rabbitSoloAqua.png" alt="">
         `)
     seccionNavScroll.appendChild(seccionLogoScroll)
     
@@ -85,7 +83,7 @@ if (window.innerWidth >= 768){
     animacionNavDesktop()
 
 }else{
-
+    
     //LOGO
     //creo el contenedor del logo del navegador.
     let seccionLogo = document.createElement('section')

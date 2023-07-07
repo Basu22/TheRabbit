@@ -17,7 +17,7 @@
         }
 
         .navegador{
-            @include grid_padre(". .""logo titulo" "nombre titulo",50vw 50vw, 10vh 60vh 30vh,normal,normal,normal);
+            @include grid_padre(". .""logo titulo" "logo titulo",50vw 50vw, 10vh 60vh 30vh,normal,normal,normal);
             
             .seccionTitulo{
                 @include grid_hijo(titulo);
@@ -55,18 +55,18 @@
                 @include grid_hijo(logo);
                 @include flex(row,nowrap,center,center,center);
                 img{
-                    @include altoAncho(100%,auto);
+                    @include altoAncho(auto,80%);
                     filter: drop-shadow(1px 10px 15px black);
                 }
             }
-            .seccionName{
+/*             .seccionName{
                 @include grid_hijo(nombre);
                 @include flex(row,nowrap,center,center,center);
                 img{
                     @include altoAncho(auto,60%);
                     filter: drop-shadow(1px 10px 15px black);
                 }
-            }
+            } */
 
             .seccionNavScroll{
                 display: grid;

@@ -1,5 +1,5 @@
 .seccionInicio{
-    background-color: rgba($color: #78b4b9, $alpha: 0.5);
+
     display: grid;
     grid-template-areas: 
         'artTitulo'
@@ -45,16 +45,17 @@
             @include altoAncho(100%,90%);
             .artParrafo{
                 @include altoAncho(90%,90%);
-                background-color: rgba($color: #000000, $alpha: 1.0);
+                background-color: rgba($color: #78b4b9, $alpha: 0.7);
                 display: grid;
                 justify-items: center;
                 align-items: center;
                 align-content: center;
+                border-radius: 30px;
                 box-shadow: rgba($color: #000000, $alpha: 0.5) 0px 6px 12px -2px;
                 p{
                     width: 90%;
                     height: 100%;
-                    color: rgba($color: #78b4b9, $alpha: 1.0);
+                    color: rgba($color: #000000, $alpha: 1.0);
                     text-shadow: 1px 1px 1px 1px rgba($color: #fbfbfb, $alpha: 1.0);
                     font-size: 1.2rem;
                     font-weight: bolder;
