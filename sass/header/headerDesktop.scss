@@ -55,7 +55,7 @@
                 @include grid_hijo(logo);
                 @include flex(row,nowrap,center,center,center);
                 img{
-                    @include altoAncho(auto,80%);
+                    @include altoAncho(auto,70%);
                     filter: drop-shadow(1px 10px 15px black);
                 }
             }

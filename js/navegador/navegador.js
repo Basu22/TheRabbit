@@ -13,7 +13,7 @@ if (window.innerWidth >= 768){
 
     //---------- LOGO DEL HEADER-----------//
     let logo = document.createElement('img');
-    logo.src = './img/logo/logoNombreBlack.png'
+    logo.src = './img/logoTexto/letrasTheRabbitWhite.png'
     seccionLogo.appendChild(logo)
     navegador.appendChild(seccionLogo)
         
@@ -75,7 +75,7 @@ if (window.innerWidth >= 768){
     seccionLogoScroll.classList.add('seccionLogoScroll')
     //le inserto la imagen del Logo
     seccionLogoScroll.insertAdjacentHTML('beforeend',`
-        <img src="./img/logo/rabbitSoloAqua.png" alt="">
+        <img src="./img/logo/TheRabbitBlack.png" alt="">
         `)
     seccionNavScroll.appendChild(seccionLogoScroll)
     

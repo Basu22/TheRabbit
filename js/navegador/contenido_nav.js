@@ -2,10 +2,10 @@ export const contenido = [
     {
         nombreNav:'Inicio',
         titulo1:'Estrategias digitales que te permiten vender más',
-        copy1_t1:'Trabajamos en equipo con nuestros clientes explorando diferentes estrategias para optimizar su presencia en medios digitales.',
+        copy1_t1:' Colaboramos estrechamente con nuestros clientes para desarrollar estrategias efectivas que maximicen su visibilidad en medios digitales.',
         copy2_t1:'Pensamos estratégicamente.',
         copy3_t1:'Mantenemos un pulso constante en las últimas tendencias y herramientas en gestión organizacional para garantizar que nuestras soluciones estén a la vanguardia y te brinden una ventaja competitiva.',
-        cta_t1:'Quiero vender más',
+        cta_t1:'Descubre más',
         img:'./img/Equipo1.jpg'
     },
     {
