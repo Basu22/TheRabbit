@@ -13,7 +13,7 @@ if (window.innerWidth >= 768){
 
     //---------- LOGO DEL HEADER-----------//
     let logo = document.createElement('img');
-    logo.src = './img/logoTexto/letrasTheRabbitWhite.png'
+    logo.src = './img/logo/logoNombreBlack.png'
     seccionLogo.appendChild(logo)
     navegador.appendChild(seccionLogo)
         
