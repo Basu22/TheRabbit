@@ -21,7 +21,7 @@ body {
 @media only screen and (min-width: 768px) {
   .header {
     position: relative;
-    background-color: rgba(120, 180, 185, 0.5);
+    background-color: rgba(254, 255, 255, 0.2);
     overflow: hidden; }
     .header .seccionVideo {
       position: absolute;
