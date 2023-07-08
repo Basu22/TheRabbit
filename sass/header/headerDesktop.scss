@@ -17,18 +17,18 @@
         }
 
         .navegador{
-            @include grid_padre(". .""logo titulo" "logo titulo",50vw 50vw, 10vh 60vh 30vh,normal,normal,normal);
+            @include grid_padre("." "logo" "titulo",100vw, 10vh 50vh 40vh,normal,normal,normal);
             
             .seccionTitulo{
                 @include grid_hijo(titulo);
-                @include flex(column,nowrap,center,center,center);
+                @include flex(column,nowrap,center,space-evenly,center);
                 row-gap: 5%;
                 text-align: center;
                 width: 100%;
                 h1{
                     width: 80%;
                     color: rgba($color: #ffffff, $alpha: 1.0);
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     font-weight: bolder;
                     text-shadow: 4px 3px 2px rgba($color: #000000, $alpha: 1.0);
                     filter: drop-shadow(1px 10px 15px black);
@@ -36,7 +36,7 @@
 
                 .botonTitulo{
                     font-family: 'Exo 2', sans-serif;
-                    padding: 2%;
+                    padding: 10px;
                     cursor: pointer;
                     filter: drop-shadow(1px 10px 15px black);
                     border-radius: 30px;
@@ -55,7 +55,7 @@
                 @include grid_hijo(logo);
                 @include flex(row,nowrap,center,center,center);
                 img{
-                    @include altoAncho(auto,70%);
+                    @include altoAncho(auto,30%);
                     filter: drop-shadow(1px 10px 15px black);
                 }
             }
