@@ -1,69 +1,69 @@
 .seccionInicio{
-
-    display: grid;
-    grid-template-areas: 
-        'artTitulo'
-        'artTexto';
-    grid-template-rows: 50vh 50vh;
+    position: relative;
+    @include grid_padre("artTitulo" "artTexto",70vw, 50vh 50vh,normal,center,normal,normal);
 
     .artTitulo{
-        grid-area: artTitulo;
-        display: grid;
-        grid-template-areas:
-            "titulo";
-        grid-template-rows: 25vh;
-        grid-template-columns: 80vw;
-        justify-content: center;
-        align-items: space-evenly;
-        align-content: center;
-        justify-items: center;
-
+        @include grid_hijo(artTitulo);
+        @include grid_padre("titulo",auto,auto,normal,space-evenly,normal,normal);
+        @include altoAncho(100%,100%);
         .tituloInicio{
-            font-size: 3rem;
-            grid-area: titulo;
-            text-align: center;
+            @include grid_hijo(titulo);
+            @include flex(column,nowrap,normal,center,center);
             @include altoAncho(100%,100%);
-            @include flex(column,nowrap,normal,center,center)
+            font-size: 1.5rem;
+            text-align: center;
         }
     }
-    .artTexto{
-        grid-area: artTexto;
-        display: grid;
-        grid-template-areas:
-            "texto";
-        grid-template-columns: 100%;
-        justify-items: center;
-        .textoInicio{
-            grid-area: texto;
-            display: grid;
-            grid-template-areas:
-            "texto1 texto2 texto3";
-            grid-template-columns: 1fr 1fr 1fr;
-            align-items: center;
+    .artCarousel{
+        position: relative;
+        @include grid_hijo(artTexto);
+        @include grid_padre("caja",auto,auto,normal,normal,normal,normal);
+        overflow: hidden;
+        .cajaCarousel{
+            position: absolute;
+            top:0;
+            left: 15px;
+            @include grid_hijo(caja);
+            @include flex(row,nowrap,normal,center,center);
+            column-gap: 15px;
+            @include altoAncho(100%,auto);
             text-align: center;
-            opacity: 0;
-            @include altoAncho(100%,90%);
-            .artParrafo{
+            .contenedorCarouselTexto{
+                @include grid_padre("icono""titulo""texto",auto,30% 20% 40%,normal,normal,center,center);
                 @include altoAncho(90%,90%);
                 background-color: rgba($color: #78b4b9, $alpha: 0.7);
-                display: grid;
-                justify-items: center;
-                align-items: center;
-                align-content: center;
-                border-radius: 30px;
+                border-radius: 10px;
                 box-shadow: rgba($color: #000000, $alpha: 0.5) 0px 6px 12px -2px;
-                p{
-                    width: 90%;
-                    height: 100%;
+                .cajaCarouselIcono{
+                    @include grid_hijo(icono);
+                    @include altoAncho(90%,auto)
+
+                }
+                .cajaCarouselTitulo{
+                    @include grid_hijo(titulo);
+                    @include altoAncho(auto,90%)
+                }
+                .cajaCarouselTexto{
+                    @include grid_hijo(texto);
+                    @include altoAncho(auto,90%);
                     color: rgba($color: #000000, $alpha: 1.0);
                     text-shadow: 1px 1px 1px 1px rgba($color: #fbfbfb, $alpha: 1.0);
-                    font-size: 1.2rem;
-                    font-weight: bolder;
-                    
+                    font-size: 0.9rem;
+                    font-weight: 300;
                 }
 
             }
         }
+    }
+    .flechaCarouselIzquierda{
+        position: absolute;
+        top:0px;
+        z-index: 999;
+    }
+    .flechaCarouselDerecha{
+        position: absolute;
+        top:0px;
+        z-index: 999;
     }
 
 }

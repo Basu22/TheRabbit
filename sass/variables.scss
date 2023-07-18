@@ -14,7 +14,7 @@
   @content;
 }
 
-@mixin grid_padre($gridTemplateAreas,$gridTemplateColumns,$gridTemplatesRows,$align_content,$justify_content,$align_items) {
+@mixin grid_padre($gridTemplateAreas,$gridTemplateColumns,$gridTemplatesRows,$align_content,$justify_content,$align_items,$justify_items) {
   display: grid;
   grid-template-areas: $gridTemplateAreas;
   grid-template-columns: $gridTemplateColumns;
@@ -22,6 +22,7 @@
   align-content: $align_content;
   justify-content: $justify_content;
   align-items: $align_items;
+  justify-items: $justify_items;
 }
 
 @mixin grid_hijo($gridArea){

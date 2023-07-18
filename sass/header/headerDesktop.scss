@@ -17,7 +17,7 @@
         }
 
         .navegador{
-            @include grid_padre("." "logo" "titulo",60vw, 10vh 50vh 40vh,normal,center,normal);
+            @include grid_padre("." "logo" "titulo",60vw, 10vh 50vh 40vh,normal,center,normal,normal);
             
             .seccionTitulo{
                 @include grid_hijo(titulo);
@@ -54,7 +54,7 @@
 
             .seccionLogo{
                 @include grid_hijo(logo);
-                @include flex(row,nowrap,center,center,center);
+                @include flex(row,nowrap,center,center,flex-end);
                 img{
                     @include altoAncho(80%,auto);
                     filter: drop-shadow(1px 10px 15px black);
@@ -77,7 +77,7 @@
                 grid-template-rows: 10vh;
                 position:fixed;
                 width: 100%;
-                opacity: 0;
+                z-index: 9999;
                 .btnNavScroll{
                     display: flex;
                     justify-content: center;
